@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EngageSense: Redefining Audience Engagement</title>
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            color: #ffffff;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px dashed #ffffff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #1a1a1a;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            font-size: 1.2rem;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: bold;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+            border-bottom: 2px solid #ffcc00;
+        }
+
+        section {
+            padding: 3rem 10%;
+            line-height: 1.8;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            border-left: 6px solid #ffcc00;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        p, ul, li {
+            font-size: 1.1rem;
+        }
+
+        .infographic-container {
+            display: flex;
+            justify-content: center;
+            padding: 2rem 0;
+        }
+
+        .infographic svg {
+            max-width: 1000px;
+            width: 90%;
+        }
+
+        ul {
+            list-style-type: "→ ";
+            padding-left: 2rem;
+        }
+
+        .highlight {
+            background-color: #1a1a1a;
+            padding: 2rem;
+            border-left: 5px solid #ffcc00;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        table th, table td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid #333;
+        }
+
+        table th {
+            background-color: #222;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #1a1a1a;
+            font-size: 1rem;
+        }
+
+        a {
+            color: #ffcc00;
+            text-decoration: none;
+            border-bottom: 1px dotted transparent;
+            transition: border-bottom 0.3s;
+        }
+
+        a:hover {
+            border-bottom: 1px dotted #ffcc00;
+        }
+
+        iframe {
+            background-color: #111;
+            border: 2px dashed #ffcc00;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>EngageSense: The Black Box of Audience Engagement</h1>
+</header>
+
+<nav>
+    <a href="#introduction">Introduction</a>
+    <a href="#vision">Our Vision</a>
+    <a href="#metrics">Metrics & Use Cases</a>
+    <a href="#roadmap">Project Roadmap</a>
+    <a href="#investment">Investment</a>
+    <a href="#contact">Contact</a>
+    <a href="#cpe-formula">CPE Formula</a>
+    <a href="#processor-overview">EngageSense Processor Design</a>
+</nav>
+
+<section id="introduction">
+    <h2>Introduction: The Future of Engagement</h2>
+    <p>EngageSense is more than a system—it’s a <strong>central Black Box for engagement data</strong>, blending inputs from sensors, wearables, and more. Building on the success of <a href="#djsense">DJ Sense</a>, EngageSense will serve as the core hub for engagement metrics across industries like education, sports, and events.</p>
+</section>
+
+<section class="infographic-container">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500">
+        <defs>
+            <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse">
+                <polygon points="0 0, 10 5, 0 10" style="fill:#ffcc00;"/>
+            </marker>
+        </defs>
+
+        <!-- Starting Node -->
+        <circle cx="100" cy="250" r="30" style="fill:#1a1a1a; stroke:#ffcc00; stroke-width:2px;"/>
+        <text x="75" y="255" fill="#ffcc00" font-family="'Fira Code', monospace" font-size="14px">Inputs</text>
+
+        <!-- Arrow to next -->
+        <line x1="130" y1="250" x2="230" y2="250" stroke="#ffcc00" stroke-width="2" marker-end="url(#arrow)"/>
+
+        <!-- Black Box -->
+        <rect x="230" y="200" width="150" height="100" style="fill:#1a1a1a; stroke:#ffcc00; stroke-width:2px;"/>
+        <text x="245" y="255" fill="#ffcc00" font-family="'Fira Code', monospace" font-size="14px">EngageSense</text>
+        <text x="245" y="275" fill="#ffcc00" font-family="'Fira Code', monospace" font-size="12px">Processor</text>
+
+        <!-- Arrow to next -->
+        <line x1="380" y1="250" x2="500" y2="250" stroke="#ffcc00" stroke-width="2" marker-end="url(#arrow)"/>
+
+        <!-- Metrics Node -->
+        <circle cx="500" cy="250" r="30" style="fill:#1a1a1a; stroke:#ffcc00; stroke-width:2px;"/>
+        <text x="470" y="255" fill="#ffcc00" font-family="'Fira Code', monospace" font-size="14px">Metrics</text>
+
+        <!-- Arrow to next -->
+        <line x1="530" y1="250" x2="700" y2="250" stroke="#ffcc00" stroke-width="2" marker-end="url(#arrow)"/>
+
+        <!-- Final Output -->
+        <circle cx="750" cy="250" r="30" style="fill:#1a1a1a; stroke:#ffcc00; stroke-width:2px;"/>
+        <text x="720" y="255" fill="#ffcc00" font-family="'Fira Code', monospace" font-size="14px">Insights</text>
+    </svg>
+</section>
+
+<section id="vision">
+    <h2>Our Vision</h2>
+    <p>We envision creating a <strong>physigital processor</strong>, combining real-time physical and digital inputs into a <strong>universal Cost Per Engagement (CPE)</strong> metric that redefines how organizations measure interaction value.</p>
+</section>
+
+<section id="metrics">
+    <h2>Metrics & Use Cases: Measuring What Matters</h2>
+    <p>EngageSense tracks engagement through <strong>four dimensions</strong>:</p>
+    <ul>
+        <li><a href="https://example.com/dataset/movement-intensity">Movement Intensity</a></li>
+        <li><a href="https://example.com/dataset/crowd-density">Crowd Density</a></li>
+        <li><a href="https://example.com/dataset/reaction-speed">Reaction Speed</a></li>
+        <li><a href="https://example.com/dataset/biometric-data">Biometric Data</a></li>
+    </ul>
+</section>
+
+<footer>
+    <p>© 2025 EngageSense Project</p>
+</footer>
+</body>
+</html>
