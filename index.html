@@ -141,12 +141,9 @@
 </header>
 
 <nav>
-    <a href="#introduction">Introduction</a>
     <a href="#vision">Our Vision</a>
     <a href="#metrics">Metrics & Use Cases</a>
     <a href="#roadmap">Project Roadmap</a>
-    <a href="#investment">Investment</a>
-    <a href="#contact">Contact</a>
     <a href="#cpe-formula">CPE Formula</a>
     <a href="#processor-overview">EngageSense Processor Design</a>
 </nav>
@@ -210,6 +207,51 @@
 
 <footer>
     <p>© 2025 EngageSense Project</p>
+<section id="real-time-calculator">
+    <h2>Real-Time Engagement Score Calculator</h2>
+    <div class="calculator-container">
+        <label for="physical">Physical Engagement (0-1):</label>
+        <input type="number" id="physical" min="0" max="1" step="0.01" value="0.85">
+        <br>
+
+        <label for="emotional">Emotional Engagement (0-1):</label>
+        <input type="number" id="emotional" min="0" max="1" step="0.01" value="0.75">
+        <br>
+
+        <label for="mental">Mental Engagement (0-1):</label>
+        <input type="number" id="mental" min="0" max="1" step="0.01" value="0.60">
+        <br>
+
+        <label for="spiritual">Spiritual Engagement (0-1):</label>
+        <input type="number" id="spiritual" min="0" max="1" step="0.01" value="0.50">
+        <br>
+
+        <button onclick="calculateEngagementScore()">Calculate Engagement Score</button>
+        <div class="result" id="result">Real-Time Engagement Score: </div>
+    </div>
+
+    <script>
+        function calculateEngagementScore() {
+            const physical = parseFloat(document.getElementById('physical').value);
+            const emotional = parseFloat(document.getElementById('emotional').value);
+            const mental = parseFloat(document.getElementById('mental').value);
+            const spiritual = parseFloat(document.getElementById('spiritual').value);
+
+            // Weighting coefficients
+            const alpha = 0.4; // Physical weight
+            const beta = 0.3;  // Emotional weight
+            const gamma = 0.2; // Mental weight
+            const delta = 0.1; // Spiritual weight
+
+            // Calculate engagement score
+            const overallScore = (alpha * physical) + (beta * emotional) + (gamma * mental) + (delta * spiritual);
+
+            // Display the result
+            document.getElementById('result').innerText = `Real-Time Engagement Score: ${overallScore.toFixed(2)}`;
+        }
+    </script>
+</section>
+
 </footer>
 </body>
 </html>
